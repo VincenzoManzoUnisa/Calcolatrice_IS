@@ -15,7 +15,7 @@ public class CalcTest {
 
     @Test
     public void TestSomma(){
-        assertTrue("somma esatta", calcolatrice.Somma(1,1)==2);
+        assertTrue("somma esatta", calcolatrice.Somma(1,2)==3);
     }
     /*
     public void TestMolt(){
