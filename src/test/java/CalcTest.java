@@ -1,6 +1,7 @@
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class CalcTest {
     private Calcolatrice calcolatrice; // Assicurati che Calcolatrice sia la classe che stai testando
