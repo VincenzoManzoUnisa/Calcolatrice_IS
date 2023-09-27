@@ -1,22 +1,22 @@
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.jupiter.api.BeforeAll;
-
-import static junit.framework.TestCase.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class CalcTest {
-    Calcolatrice calcolatrice;
+    private Calcolatrice calcolatrice; // Assicurati che Calcolatrice sia la classe che stai testando
 
-    @BeforeAll
-    public final void setUp(){
-        calcolatrice = new Calcolatrice();
+    @BeforeEach
+    public void setUp() {
+        calcolatrice = new Calcolatrice(); // Inizializza l'oggetto calcolatrice prima di ogni test
     }
 
     @Test
-    public void TestSomma(){
-        assertTrue("somma esatta", calcolatrice.Somma(1,2)==3);
+    public void TestSomma() {
+        int risultato = calcolatrice.Somma(2, 3);
+        assertEquals(5, risultato); // Verifica che il risultato della somma sia corretto
     }
+
+
     /*
     public void TestMolt(){
         assertTrue("moltiplicazione esatta",calcolatrice.Moltiplicazione(2,2)==4);
